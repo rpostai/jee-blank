@@ -11,7 +11,7 @@ import javax.ws.rs.Produces;
 import br.com.rp.domain.Log;
 import br.com.rp.repository.LogRepository;
 
-@Path("log")
+@Path("/log")
 @Consumes("application/json")
 @Produces("application/json")
 public class LogRest {
