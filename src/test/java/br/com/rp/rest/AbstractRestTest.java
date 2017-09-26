@@ -37,7 +37,7 @@ public abstract class AbstractRestTest {
 	public void tearDown() {
 	}
 
-	@Deployment(testable = false)
+	@Deployment
 	public static WebArchive createTestArchive() {
 
 		File[] deps = Maven.resolver().loadPomFromFile("pom.xml").importRuntimeAndTestDependencies().resolve()
@@ -47,6 +47,7 @@ public abstract class AbstractRestTest {
 				.addPackages(false, Repository.class.getPackage())
 				.addPackages(false, AbstractRepositoryImpl.class.getPackage())
 				.addPackages(false, AbstractRestTest.class.getPackage())
+				.addPackages(false, LogRest.class.getPackage())
 				.addPackage(LogRepositoryTest.class.getPackage())
 				.addPackage(LogRestTest.class.getPackage())
 				.addAsResource("test-persistence.xml", "META-INF/persistence.xml")
