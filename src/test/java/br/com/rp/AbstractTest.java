@@ -53,7 +53,7 @@ public abstract class AbstractTest {
 				.addPackage(LogService.class.getPackage())
 				.addPackage(LogServiceTest.class.getPackage())
 				.addAsResource("test-persistence.xml", "META-INF/persistence.xml")
-				.addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml").addAsWebInfResource("cesumar-ds.xml")
+				.addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml").addAsWebInfResource("vbank-ds.xml")
 				.addAsLibraries(deps);
 
 		return archive;
