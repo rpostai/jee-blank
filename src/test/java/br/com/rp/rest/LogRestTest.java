@@ -1,5 +1,7 @@
 package br.com.rp.rest;
 
+import static org.junit.Assert.assertNotNull;
+
 import java.util.List;
 
 import javax.ws.rs.client.Client;
@@ -16,13 +18,21 @@ import br.com.rp.domain.Log;
 
 public class LogRestTest extends AbstractRestTest {
 
-	private static final String URL = "http://localhost:8080/vbank/api/log";
+	private static final String URL = "http://localhost:8080/vbank/api/";
+
+	@Test
+	public void deveRetornarTeste() {
+		Client client = ClientBuilder.newClient();
+		WebTarget target = client.target(URL + "teste");
+		String result = target.request(MediaType.APPLICATION_JSON).accept(MediaType.APPLICATION_JSON).get(String.class);
+		assertNotNull(result);
+	}
 
 	@Test
 	@UsingDataSet("db/log.xml")
 	public void deveRetornar2LogsPeloRest() {
 		Client client = ClientBuilder.newClient();
-		WebTarget target = client.target(URL);
+		WebTarget target = client.target(URL + "log");
 		List<Log> logs = target.request(MediaType.APPLICATION_JSON).accept(MediaType.APPLICATION_JSON)
 				.get(new GenericType<List<Log>>() {
 				});

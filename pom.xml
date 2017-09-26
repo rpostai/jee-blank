@@ -93,19 +93,6 @@
 			<version>3.2.1</version>
 		</dependency>
 
-		<dependency>
-			<groupId>com.google.collections</groupId>
-			<artifactId>google-collections</artifactId>
-			<version>1.0</version>
-		</dependency>
-
-
-		<dependency>
-			<groupId>com.google.code.gson</groupId>
-			<artifactId>gson</artifactId>
-			<version>2.2.4</version>
-		</dependency>
-
 
 		<!-- infra de teste -->
 		<dependency>
@@ -120,18 +107,6 @@
 			<artifactId>h2</artifactId>
 			<scope>test</scope>
 			<version>1.4.178</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.eclipse.persistence</groupId>
-			<artifactId>eclipselink</artifactId>
-			<version>2.5.0-RC1</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.eclipse.persistence</groupId>
-					<artifactId>commonj.sdo</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 
 		<dependency>
@@ -170,17 +145,19 @@
 		<dependency>
 			<groupId>org.wildfly</groupId>
 			<artifactId>wildfly-arquillian-container-managed</artifactId>
-			<version>8.1.0.Final</version>
+			<version>8.2.1.Final</version>
 			<scope>test</scope>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.jboss.resteasy/resteasy-client -->
+		<!--  se colocar a depdencia do resteasy, o rest nao funciona -->
+		<!-- 
 		<dependency>
 			<groupId>org.jboss.resteasy</groupId>
 			<artifactId>resteasy-client</artifactId>
 			<version>3.1.4.Final</version>
 			<scope>test</scope>
 		</dependency>
+		-->
 
 		<!-- dependencia necessaria para evitar o erro do jconsole no windows -->
 		<dependency>

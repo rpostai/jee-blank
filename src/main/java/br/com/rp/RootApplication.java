@@ -1,9 +1,9 @@
-package br.com.rp.rest;
+package br.com.rp;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
-@ApplicationPath("/api")
+@ApplicationPath("api")
 public class RootApplication extends Application {
 
 }

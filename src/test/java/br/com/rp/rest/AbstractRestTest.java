@@ -16,6 +16,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.runner.RunWith;
 
+import br.com.rp.RootApplication;
 import br.com.rp.domain.Log;
 import br.com.rp.repository.LogRepositoryTest;
 import br.com.rp.repository.Repository;
@@ -47,6 +48,7 @@ public abstract class AbstractRestTest {
 				.addPackages(false, Repository.class.getPackage())
 				.addPackages(false, AbstractRepositoryImpl.class.getPackage())
 				.addPackages(false, AbstractRestTest.class.getPackage())
+				.addPackages(false, RootApplication.class.getPackage())
 				.addPackages(false, LogRest.class.getPackage())
 				.addPackage(LogRepositoryTest.class.getPackage())
 				.addPackage(LogRestTest.class.getPackage())
