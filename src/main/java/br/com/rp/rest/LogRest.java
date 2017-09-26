@@ -9,7 +9,7 @@ import javax.ws.rs.Path;
 import br.com.rp.domain.Log;
 import br.com.rp.repository.LogRepository;
 
-@Path("/log")
+@Path("log")
 public class LogRest {
 
 	@EJB

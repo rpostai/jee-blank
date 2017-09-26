@@ -21,8 +21,8 @@ public class LogRestTest extends AbstractRestTest {
 
 	@Test
 	@UsingDataSet("db/log.xml")
-	public void deveRetornar2LogsPeloRest(@ArquillianResource URL baseURI) {
-		System.out.println(baseURI.getPath() + "/api/log");
+	public void deveRetornar2LogsPeloRest() {
+	//	System.out.println(baseURI.getPath() + "/api/log");
 		Client client = ClientBuilder.newClient();
 		WebTarget target = client.target(URL);
 		Response response = target.request().get();

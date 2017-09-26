@@ -6,7 +6,7 @@
 	<artifactId>pos-java</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>Cesumar :: POS JAVA</name>
+	<name>VBANK :: POS JAVA</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -182,6 +182,7 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- dependencia necessaria para evitar o erro do jconsole no windows -->
 		<dependency>
 			<groupId>org.wildfly</groupId>
 			<artifactId>wildfly-cli</artifactId>
@@ -193,6 +194,7 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		<!-- dependencia necessaria para evitar o erro do jconsole no windows -->
 
 	</dependencies>
 
