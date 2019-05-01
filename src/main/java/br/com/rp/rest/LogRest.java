@@ -41,5 +41,4 @@ public class LogRest {
 		repository.remove(id);
 		return Response.ok().build();
 	}
-
 }
