@@ -7,7 +7,7 @@ http://jboss.org/schema/arquillian/arquillian_1_0.xsd">
 
 	<container qualifier="jboss" default="true">
 		<configuration>
-			<property name="jbossHome">C:\tools\wildfly-10.1.0.Final</property>
+			<property name="jbossHome">D:\rodrigo\tools\wildfly-10.1.0.Final</property>
 			<property name="allowConnectingToRunningServer">true</property>
 			<!-- <property name="javaVmArguments">-agentlib:jdwp=transport=dt_socket,address=8000,server=y,suspend=y</property>  -->  
 		</configuration>
