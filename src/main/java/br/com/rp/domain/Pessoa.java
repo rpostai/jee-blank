@@ -1,5 +1,7 @@
 package br.com.rp.domain;
 
+import java.math.BigDecimal;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -16,7 +18,9 @@ public class Pessoa extends BaseEntity {
 	private String nome;
 
 	private Integer idade;
-
+	
+	private BigDecimal salario;
+	
 	public String getNome() {
 		return nome;
 	}
@@ -31,6 +35,14 @@ public class Pessoa extends BaseEntity {
 
 	public void setIdade(Integer idade) {
 		this.idade = idade;
+	}
+
+	public BigDecimal getSalario() {
+		return salario;
+	}
+
+	public void setSalario(BigDecimal salario) {
+		this.salario = salario;
 	}
 
 }

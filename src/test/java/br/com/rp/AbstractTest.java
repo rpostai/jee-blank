@@ -31,7 +31,7 @@ public abstract class AbstractTest {
 	EntityManager em;
 
 	@Before
-	public void setup() {
+	public void setup() throws Throwable {
 
 	}
 
