@@ -34,6 +34,13 @@ public class LogRest {
 		repository.save(log);
 		return Response.ok().build();
 	}
+	
+	@POST
+	@Path("salvar")
+	public Response salvar2(Log log) {
+		repository.save(log);
+		return Response.ok().build();
+	}
 
 	@DELETE
 	@Path("/{id}")
